@@ -1,0 +1,71 @@
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
+mat-tab-group {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+
+
+.project-card {
+  margin-top: 1rem;
+  display: inline-block;
+  width: 60%;
+  background: linear-gradient(to bottom right, #004f4f, rgba(0, 79, 79, 0.56));
+  box-shadow: 0 0 20px 16px #0000001f;
+  overflow: hidden;
+}
+
+.custom-label{
+  color: aliceblue;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+
+
+
+.tab-shadow{
+  margin: auto;
+  width: 60%;
+  box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.2), 10px 0 20px -10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  /*border: 2px solid #004f4f;*/
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: yellowgreen;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.card-header {
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 700px) {
+  .tab-shadow{
+    width: 100%;
+  }
+
+  .project-card{
+    width: 90%;
+  }
+}
+
+
+
+

@@ -31,12 +31,14 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
-            "styles": [
+            "styles": ["node_modules/@videogular/ngx-videogular/fonts/videogular.css",
+              "@angular/material/prebuilt-themes/cyan-orange.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -46,13 +48,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "3MB"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumError": "10kB"
                 }
               ],
               "outputHashing": "all"
@@ -95,6 +97,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/cyan-orange.css",
               "src/styles.css"
             ],
             "scripts": []

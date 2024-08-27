@@ -1,0 +1,50 @@
+<div class="blog-container">
+  <div class="blog-content">
+
+    <div class="blog-article-list">
+      @for (article of ARTICLES; track article.header) {
+        <div class="article">
+          <div class="article-img">
+            <img [src]="article.imgUrl">
+          </div>
+          <div class="article-header">
+            <h5>{{ article.header }}</h5>
+          </div>
+
+          <div class="article-read">
+            <button mat-icon-button>
+              <mat-icon (click)="shareArticle()">share</mat-icon>
+            </button>
+            <button mat-raised-button (click)="displayArticleContent(article.htmlContent)">Read</button>
+          </div>
+
+          <div class="article-preview">
+            <ul>
+              @for (preview of article.preview; track preview) {
+                <li>{{ preview }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+
+      } @empty {
+        <div class="empty-alert">Ooops ... <p>Seems like author have not created content yet :(</p></div>
+      }
+    </div>
+  </div>
+
+  <div class="blog-content-nav">
+
+    @for (category of ARTICLE_CATEGORIES; track category.identifier) {
+
+      <div class="content-nav" [class.current-category]="this.currentCategory == category.identifier">
+        <div class="nav-category-pointer">
+          <mat-icon>arrow_forward</mat-icon>
+        </div>
+        <img style="" [src]="category.imgUrl" width="30rem">
+        <a class="content-nav-item" (click)="switchCategory(category.identifier)">{{ category.name }}</a>
+      </div>
+    }
+  </div>
+</div>
+
