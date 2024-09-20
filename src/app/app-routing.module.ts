@@ -6,11 +6,13 @@ import {HomeComponent} from "./components/home/home.component";
 import {BlogComponent} from "./components/blog/blog.component";
 import {ProjectComponent} from "./components/project/project.component";
 import {AboutComponent} from "./components/about/about.component";
+import {CustomComponent} from "./components/custom/custom.component";
 
 const routes: Routes = [
+  // {path:'', component: CustomComponent},
   {path:'', component: HomeComponent},
   {path: 'portfolio' , component: PortfolioComponent},
-  {path: 'portfolio/:id' , component: PortfolioComponent},
+  // {path: 'portfolio/:id' , component: PortfolioComponent},
   {path: 'blog' , component: BlogComponent},
   {path: 'blog/:id' , component: BlogComponent},
   {path: 'about', component: AboutComponent},

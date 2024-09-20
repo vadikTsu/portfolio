@@ -5,19 +5,34 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
 import {ArticleComponent} from "../article/article.component";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {animate, query, stagger, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrl: './blog.component.css'
+  styleUrl: './blog.component.css',
+  animations: [
+    trigger('anim', [
+      transition('*<=>*', [
+        query(':enter', [
+          style({opacity: 0.5, transform: 'scale(0.9)'}),
+          stagger(150, [
+            animate('500ms ease-in',style({opacity: 1, transform: 'scale(1)'})),
+          ])
+        ], {optional: false}
+        )
+      ])
+    ])
+  ]
 })
-export class BlogComponent implements OnInit{
+export class BlogComponent implements OnInit {
 
   protected currentCategory: string = 'all';
   protected ARTICLES: Article[] = [];
   protected ARTICLE_CATEGORIES: ArticleCategory[] = [];
 
-  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router,private snackBar: MatSnackBar) {}
+  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router, private snackBar: MatSnackBar) {
+  }
 
   ngOnInit() {
     this.ARTICLES = MOCK_ARTICLES;
@@ -32,7 +47,7 @@ export class BlogComponent implements OnInit{
 
     if (identifier == 'all') {
       this.ARTICLES = MOCK_ARTICLES;
-      this.currentCategory=identifier;
+      this.currentCategory = identifier;
       return;
     }
 
@@ -41,22 +56,23 @@ export class BlogComponent implements OnInit{
 
   }
 
-  shareArticle(){
+  shareArticle() {
     navigator.clipboard.writeText("text").then(
-      () => this.snackBar.open( ` copied to clipboard!`, 'Close',
-        {duration: 4000, verticalPosition:'top', panelClass: 'article-read'
-      }))
+      () => this.snackBar.open(` copied to clipboard!`, 'Close',
+        {
+          duration: 4000, verticalPosition: 'top', panelClass: 'article-read'
+        }))
       .catch(err => alert(err));
   }
 
-    displayArticleContent(htmlContent: string) {
-      this.dialog.open(ArticleComponent, {
-        data:{
-          title: htmlContent,
-          content: htmlContent,
-        } ,
-        maxWidth: '90vw',
-        maxHeight: '90vh'
-      });
-    }
+  displayArticleContent(htmlContent: string) {
+    this.dialog.open(ArticleComponent, {
+      data: {
+        title: htmlContent,
+        content: htmlContent,
+      },
+      minWidth: '100vw',
+      maxHeight: '100vh'
+    });
+  }
 }

@@ -1,7 +1,7 @@
 <mat-sidenav-container  fullscreen>
 
 
-  <mat-toolbar>
+  <mat-toolbar style="border-radius: 1rem">
 
     <img class="pepe" mat-card-image src="assets/pepe-happy.png">
 
@@ -24,14 +24,34 @@
       </a>
     </div>
 
+
     <div class="action-picker-mobile">
-      <button mat-icon-button>
+      <button (click)="toggleMobileMenu()" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
-    </div>
 
+      </div>
   </mat-toolbar>
+  @if(window.innerWidth < 700 && mobileMenuState == 'opened'){
+    <div
+      style="display: flex; flex-direction: column; align-items: center;
+      justify-content: space-between ;
+       overflow: hidden;sz-index: 1;
+        margin: auto;
+         background: #006a6a; width: 80vw; height: 30vh;
+          border-radius: 2rem;
+            box-shadow: 0 12px 2px 0 black"
+      [@openClose]="mobileMenuState"
+    >
+      <button  mat-raised-button  style="width: 50%; margin-top: 2rem"> Button</button>
+      <button mat-raised-button  style="width: 50%"> Button</button>
+      <button mat-raised-button style="width: 50%"> Button</button>
+      <button mat-raised-button  style="width: 50%; margin-bottom: 2rem"> Button</button>
+    </div>
+    <div style="height: 2rem">
 
+    </div>
+  }
   <router-outlet/>
 
 

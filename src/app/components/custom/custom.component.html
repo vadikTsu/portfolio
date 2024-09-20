@@ -1,0 +1,43 @@
+<!--<div  style="margin: auto; margin-bottom: 80vh;  text-align: center ; width: 40%">-->
+
+<!--<div class="time-list">-->
+
+<!--  <div *ngFor="let task of tasks; let i = index" class="dragable" [attr.draggable]="true"-->
+<!--         (dragstart)="onDragStart($event, i)"-->
+<!--         [@dragState]="dragIndex === i ? 'dragging' : 'dropped'"-->
+<!--         (dragover)="onDragOver($event)"-->
+<!--         (drop)="onDragDrop($event, i)" >{{task}}</div>-->
+<!--</div>-->
+
+
+<!--</div>-->
+
+<!--<div class="resizable-container">-->
+<!--  <div id="jj" class="resizable-box" #boxElement>-->
+<!--    <div class="size-display">{{ width }} x {{ height }}</div>-->
+<!--    <div class="resize-handle" (mousedown)="onResizeStart($event, boxElement)"></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div class="container">-->
+<!--  <div class="content">-->
+<!--    <div class="inner-content">-->
+<!--      This content is larger than its container, so the excess will be clipped. No scrollbars will appear,-->
+<!--      and the content that extends beyond the container's edges will simply not be visible.-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div style="margin:0; padding: 3rem; height: 100vh" #imgMagic>
+
+
+
+
+    <input type="file" id="fileInput" accept="image/*" multiple>
+<!--    <button (submit)="onSubmit()"></button>-->
+
+  <div class="img-list" id="imgList" >
+
+  </div>
+
+</div>

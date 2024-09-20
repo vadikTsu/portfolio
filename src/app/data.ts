@@ -3,208 +3,275 @@ import {Article, ArticleCategory, Project, ProjectType} from "./interfaces/inter
 export const MOCK_ARTICLES: Article[] = [
   {
     id: 1,
-    imgUrl:'assets/bg.jpg',
-    header: 'The Future of Technology',
+    imgUrl: 'assets/angular-feature.png',
+    header: 'Working with Angular',
     preview: [
-      'Exploring the trends that will shape the next decade.',
-      'A deep dive into AI, quantum computing, and more.'
+      'Advantage above other frameworks like React.',
+      'Learning path and ease of use. My experience.'
     ],
-    categoryIdentifier: 'technology',
+    categoryIdentifier: 'angular',
     htmlContent: `
-<h2 style="font-size: 2rem; color: #4A90E2; text-align: center; margin-bottom: 1.5rem; font-weight: bold;">
-  The Future of Technology
-</h2>
+ <title>Working with Angular: A Comprehensive Guide</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
 
-<p style="font-size: 1.1rem; color: #4CAF50; line-height: 1.6; text-align: justify; margin-bottom: 2rem;">
-  The world of technology is rapidly evolving, with new trends and innovations shaping the way we live and work. In this article, we explore the key areas to watch in the coming years.
-</p>
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-<h3 style="font-size: 1.5rem; color: #D0021B; margin-bottom: 1rem; border-bottom: 2px solid #D0021B; padding-bottom: 0.5rem;">
-  Artificial Intelligence
-</h3>
+    h1, h2, h3 {
+      color: #333;
+    }
 
-<p style="font-size: 1rem; color: #56ACE0; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
-  AI is already transforming industries, from healthcare to finance. As algorithms become more sophisticated, we can expect even more breakthroughs in this field.
-</p>
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-<h3 style="font-size: 1.5rem; color: #8B572A; margin-bottom: 1rem; border-bottom: 2px solid #8B572A; padding-bottom: 0.5rem;">
-  Quantum Computing
-</h3>
+    h2 {
+      font-size: 2rem;
+      margin-top: 20px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
 
-<p style="font-size: 1rem; color: #555; line-height: 1.8; text-align: justify;">
-  Quantum computing holds the promise of solving complex problems that are beyond the reach of classical computers. This technology could revolutionize industries such as cryptography and material science.
-</p><h2 style="font-size: 2rem; color: #4A90E2; text-align: center; margin-bottom: 1.5rem; font-weight: bold;">
-  The Future of Technology
-</h2>
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 15px;
+    }
 
-<p style="font-size: 1.1rem; color: #4CAF50; line-height: 1.6; text-align: justify; margin-bottom: 2rem;">
-  The world of technology is rapidly evolving, with new trends and innovations shaping the way we live and work. In this article, we explore the key areas to watch in the coming years.
-</p>
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
 
-<h3 style="font-size: 1.5rem; color: #D0021B; margin-bottom: 1rem; border-bottom: 2px solid #D0021B; padding-bottom: 0.5rem;">
-  Artificial Intelligence
-</h3>
+    .tech-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
 
-<p style="font-size: 1rem; color: #56ACE0; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
-  AI is already transforming industries, from healthcare to finance. As algorithms become more sophisticated, we can expect even more breakthroughs in this field.
-</p>
+    .tech-item {
+      text-align: center;
+    }
 
-<h3 style="font-size: 1.5rem; color: #8B572A; margin-bottom: 1rem; border-bottom: 2px solid #8B572A; padding-bottom: 0.5rem;">
-  Quantum Computing
-</h3>
+    .tech-item i {
+      font-size: 2rem;
+      color: #007bff;
+      margin-bottom: 5px;
+    }
 
-<p style="font-size: 1rem; color: #555; line-height: 1.8; text-align: justify;">
-  Quantum computing holds the promise of solving complex problems that are beyond the reach of classical computers. This technology could revolutionize industries such as cryptography and material science.
-</p><h2 style="font-size: 2rem; color: #4A90E2; text-align: center; margin-bottom: 1.5rem; font-weight: bold;">
-  The Future of Technology
-</h2>
+    .tech-item p {
+      font-size: 1rem;
+      color: #333;
+    }
 
-<p style="font-size: 1.1rem; color: #4CAF50; line-height: 1.6; text-align: justify; margin-bottom: 2rem;">
-  The world of technology is rapidly evolving, with new trends and innovations shaping the way we live and work. In this article, we explore the key areas to watch in the coming years.
-</p>
+    .section {
+      margin-top: 30px;
+    }
 
-<h3 style="font-size: 1.5rem; color: #D0021B; margin-bottom: 1rem; border-bottom: 2px solid #D0021B; padding-bottom: 0.5rem;">
-  Artificial Intelligence
-</h3>
+    .section h2 {
+      font-size: 1.8rem;
+      color: #007bff;
+    }
 
-<p style="font-size: 1rem; color: #56ACE0; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
-  AI is already transforming industries, from healthcare to finance. As algorithms become more sophisticated, we can expect even more breakthroughs in this field.
-</p>
+    .section p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
 
-<h3 style="font-size: 1.5rem; color: #8B572A; margin-bottom: 1rem; border-bottom: 2px solid #8B572A; padding-bottom: 0.5rem;">
-  Quantum Computing
-</h3>
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 300px;
+      margin: 20px auto;
+    }
 
-<p style="font-size: 1rem; color: #555; line-height: 1.8; text-align: justify;">
-  Quantum computing holds the promise of solving complex problems that are beyond the reach of classical computers. This technology could revolutionize industries such as cryptography and material science.
-</p><h2 style="font-size: 2rem; color: #4A90E2; text-align: center; margin-bottom: 1.5rem; font-weight: bold;">
-  The Future of Technology
-</h2>
+    .link-item {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 0.75rem 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
 
-<p style="font-size: 1.1rem; color: #4CAF50; line-height: 1.6; text-align: justify; margin-bottom: 2rem;">
-  The world of technology is rapidly evolving, with new trends and innovations shaping the way we live and work. In this article, we explore the key areas to watch in the coming years.
-</p>
+    .link-item i {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      color: #007bff;
+    }
 
-<h3 style="font-size: 1.5rem; color: #D0021B; margin-bottom: 1rem; border-bottom: 2px solid #D0021B; padding-bottom: 0.5rem;">
-  Artificial Intelligence
-</h3>
+    .link-item:hover {
+      background: #007bff;
+      color: #fff;
+      border-color: #007bff;
+    }
+  </style>
+</head>
+  <div class="container">
+    <header>
+      <h1>Working with Angular</h1>
+      <p>Discover how Angular can streamline your web development process and build robust applications.</p>
+    </header>
 
-<p style="font-size: 1rem; color: #56ACE0; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
-  AI is already transforming industries, from healthcare to finance. As algorithms become more sophisticated, we can expect even more breakthroughs in this field.
-</p>
+    <section class="section">
+      <h2>Introduction to Angular</h2>
+      <p>
+        Angular is a powerful front-end web framework developed by Google. It enables developers to build dynamic, single-page applications (SPAs) with ease. Angular is based on TypeScript, which brings strong typing and modern JavaScript features to the table. With its rich set of features and tools, Angular simplifies the development of complex applications.
+      </p>
+    </section>
 
-<h3 style="font-size: 1.5rem; color: #8B572A; margin-bottom: 1rem; border-bottom: 2px solid #8B572A; padding-bottom: 0.5rem;">
-  Quantum Computing
-</h3>
+    <section class="section">
+      <h2>Key Features of Angular</h2>
+      <div class="tech-icons">
+        <div class="tech-item">
+          <i class="fab fa-angular"></i>
+          <p>Component-Based Architecture</p>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-code"></i>
+          <p>TypeScript Support</p>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-cogs"></i>
+          <p>Two-Way Data Binding</p>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-plug"></i>
+          <p>Dependency Injection</p>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-tools"></i>
+          <p>Rich CLI Tools</p>
+        </div>
+      </div>
+    </section>
 
-<p style="font-size: 1rem; color: #555; line-height: 1.8; text-align: justify;">
-  Quantum computing holds the promise of solving complex problems that are beyond the reach of classical computers. This technology could revolutionize industries such as cryptography and material science.
-</p><h2 style="font-size: 2rem; color: #4A90E2; text-align: center; margin-bottom: 1.5rem; font-weight: bold;">
-  The Future of Technology
-</h2>
+    <section class="section">
+      <h2>Getting Started with Angular</h2>
+      <p>
+        To get started with Angular, follow these steps:
+      </p>
+      <ul>
+        <li><strong>Install Node.js</strong> - Ensure you have Node.js installed on your machine, as Angular requires it for its development server and build tools.</li>
+        <li><strong>Install Angular CLI</strong> - Use the command <code>npm install -g @angular/cli</code> to install the Angular Command Line Interface (CLI), which helps in creating and managing Angular projects.</li>
+        <li><strong>Create a New Angular Project</strong> - Run <code>ng new my-angular-app</code> to create a new project. This will generate the necessary files and folder structure.</li>
+        <li><strong>Serve the Application</strong> - Navigate to your project folder and run <code>ng serve</code>. This will start a development server and you can view your app at <code>http://localhost:4200</code>.</li>
+      </ul>
+    </section>
 
-<p style="font-size: 1.1rem; color: #4CAF50; line-height: 1.6; text-align: justify; margin-bottom: 2rem;">
-  The world of technology is rapidly evolving, with new trends and innovations shaping the way we live and work. In this article, we explore the key areas to watch in the coming years.
-</p>
-
-<h3 style="font-size: 1.5rem; color: #D0021B; margin-bottom: 1rem; border-bottom: 2px solid #D0021B; padding-bottom: 0.5rem;">
-  Artificial Intelligence
-</h3>
-
-<p style="font-size: 1rem; color: #56ACE0; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
-  AI is already transforming industries, from healthcare to finance. As algorithms become more sophisticated, we can expect even more breakthroughs in this field.
-</p>
-
-<h3 style="font-size: 1.5rem; color: #8B572A; margin-bottom: 1rem; border-bottom: 2px solid #8B572A; padding-bottom: 0.5rem;">
-  Quantum Computing
-</h3>
-
-<p style="font-size: 1rem; color: #555; line-height: 1.8; text-align: justify;">
-  Quantum computing holds the promise of solving complex problems that are beyond the reach of classical computers. This technology could revolutionize industries such as cryptography and material science.
-</p><h2 style="font-size: 2rem; color: #4A90E2; text-align: center; margin-bottom: 1.5rem; font-weight: bold;">
-  The Future of Technology
-</h2>
-
-<p style="font-size: 1.1rem; color: #4CAF50; line-height: 1.6; text-align: justify; margin-bottom: 2rem;">
-  The world of technology is rapidly evolving, with new trends and innovations shaping the way we live and work. In this article, we explore the key areas to watch in the coming years.
-</p>
-
-<h3 style="font-size: 1.5rem; color: #D0021B; margin-bottom: 1rem; border-bottom: 2px solid #D0021B; padding-bottom: 0.5rem;">
-  Artificial Intelligence
-</h3>
-
-<p style="font-size: 1rem; color: #56ACE0; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
-  AI is already transforming industries, from healthcare to finance. As algorithms become more sophisticated, we can expect even more breakthroughs in this field.
-</p>
-
-<h3 style="font-size: 1.5rem; color: #8B572A; margin-bottom: 1rem; border-bottom: 2px solid #8B572A; padding-bottom: 0.5rem;">
-  Quantum Computing
-</h3>
-
-<p style="font-size: 1rem; color: #555; line-height: 1.8; text-align: justify;">
-  Quantum computing holds the promise of solving complex problems that are beyond the reach of classical computers. This technology could revolutionize industries such as cryptography and material science.
-</p><h2 style="font-size: 2rem; color: #4A90E2; text-align: center; margin-bottom: 1.5rem; font-weight: bold;">
-  The Future of Technology
-</h2>
-
-<p style="font-size: 1.1rem; color: #4CAF50; line-height: 1.6; text-align: justify; margin-bottom: 2rem;">
-  The world of technology is rapidly evolving, with new trends and innovations shaping the way we live and work. In this article, we explore the key areas to watch in the coming years.
-</p>
-
-<h3 style="font-size: 1.5rem; color: #D0021B; margin-bottom: 1rem; border-bottom: 2px solid #D0021B; padding-bottom: 0.5rem;">
-  Artificial Intelligence
-</h3>
-
-<p style="font-size: 1rem; color: #56ACE0; line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
-  AI is already transforming industries, from healthcare to finance. As algorithms become more sophisticated, we can expect even more breakthroughs in this field.
-</p>
-
-<h3 style="font-size: 1.5rem; color: #8B572A; margin-bottom: 1rem; border-bottom: 2px solid #8B572A; padding-bottom: 0.5rem;">
-  Quantum Computing
-</h3>
-
-<p style="font-size: 1rem; color: #555; line-height: 1.8; text-align: justify;">
-  Quantum computing holds the promise of solving complex problems that are beyond the reach of classical computers. This technology could revolutionize industries such as cryptography and material science.
-</p>
+    <section class="section">
+      <h2>Useful Links</h2>
+      <div class="links-container">
+        <a href="https://angular.io" class="link-item" target="_blank">
+          <i class="fab fa-angular"></i> Angular Official Site
+        </a>
+        <a href="https://github.com/angular/angular" class="link-item" target="_blank">
+          <i class="fab fa-github"></i> Angular GitHub Repository
+        </a>
+      </div>
+    </section>
+  </div>
     `
   },
   {
     id: 2,
-    imgUrl:'assets/bg.jpg',
+    imgUrl: 'assets/bg.jpg',
 
-    header: 'A Guide to Healthy Living',
+    header: 'Staying Fit while programming',
     preview: [
       'Tips and tricks for maintaining a balanced lifestyle.',
-      'The importance of mental and physical well-being.'
+      'The importance of mental and physical well-being.',
+      'The best practices I discovered.'
     ],
-    categoryIdentifier: 'health',
+    categoryIdentifier: 'sport',
     htmlContent: `
-      <h2>A Guide to Healthy Living</h2>
-      <p>Maintaining a healthy lifestyle is crucial for overall well-being. This guide covers various aspects of health, from diet and exercise to mental health.</p>
-      <h3>Nutrition</h3>
-      <p>A balanced diet is the foundation of good health. Ensure you're getting the right nutrients by incorporating a variety of fruits, vegetables, and whole grains into your meals.</p>
-      <h3>Exercise</h3>
-      <p>Regular physical activity is essential for maintaining a healthy body and mind. Aim for at least 30 minutes of exercise each day to stay fit.</p>
+        <style>
+        .empty-alert {
+        box-shadow: 0px 4px 0px 4px rgba(0, 0, 0, 40);
+            font-family: "Arial";
+                font-weight: bold;
+         line-height: 1.5;
+          font-size: 2rem;
+            text-align: center;
+            color: #0e0404;
+  margin-top: 20%;
+  padding: 4rem;
+  align-self: center;
+  border-radius: 2rem;
+  background: rgb(255, 193, 13);
+  border: 2px solid black
+  width: 40vw;
+}
+
+.empty-alert p{
+  font-size: 1rem;
+}
+
+</style>
+<div  style="height: 100vh" >
+
+        <div class="empty-alert">Ooops ... <p>Seems like author have not created content yet :(</p></div>
+</div>
     `
   },
   {
     id: 3,
-    imgUrl:'assets/bg.jpg',
+    imgUrl: 'assets/sec.jpg',
 
-    header: 'The Beauty of Minimalism',
+    header: 'Hard way learning Spring Security',
     preview: [
-      'How simplifying your life can lead to greater happiness.',
-      'Decluttering tips and minimalist living strategies.'
+      'My fails while learning Spring Security',
+      'The better approach I found.'
     ],
     categoryIdentifier: 'java',
     htmlContent: `
-      <h2>The Beauty of Minimalism</h2>
-      <p>Minimalism is more than just a design trend; it's a way of life. By focusing on what truly matters, you can reduce stress and find greater joy in the everyday.</p>
-      <h3>Decluttering Your Space</h3>
-      <p>Start by getting rid of items you no longer need. This will not only create a more organized space but also free your mind from unnecessary distractions.</p>
-      <h3>Embracing Simplicity</h3>
-      <p>Simplify your daily routine by prioritizing tasks and eliminating distractions. This will help you focus on what's truly important and lead to a more fulfilling life.</p>
-    `
+        <style>
+        .empty-alert {
+        box-shadow: 0px 4px 0px 4px rgba(0, 0, 0, 40);
+            font-family: "Arial";
+                font-weight: bold;
+         line-height: 1.5;
+          font-size: 2rem;
+            text-align: center;
+            color: #0e0404;
+  margin-top: 20%;
+  padding: 4rem;
+  align-self: center;
+  border-radius: 2rem;
+  background: rgb(255, 193, 13);
+  border: 2px solid black
+  width: 40vw;
+}
+
+.empty-alert p{
+  font-size: 1rem;
+}
+
+</style>
+<div  style="height: 100vh" >
+
+        <div class="empty-alert">Ooops ... <p>Seems like author have not created content yet :(</p></div>
+</div>    `
   }
 
 ];
@@ -244,58 +311,259 @@ export const MOCK_CATEGORIES: ArticleCategory[] = [
 export const MOCK_PROJECTS: Project[] = [
   {
     id: 1,
-    imgUrl: 'assets/java-svgrepo-com.svg',
+    imgUrl: 'assets/online-auction.png',
     type: ProjectType.COMPLETE,
-    title: "E-Commerce Platform",
-    agenda: "Develop a fully-functional e-commerce platform with payment gateway integration and a user-friendly interface.",
-    htmlContent: "<h1>E-Commerce Platform</h1><p>This project involves building a complete online shopping platform. Features include a product catalog, shopping cart, checkout process, and payment gateway integration. The goal is to create a seamless shopping experience for users.</p>"
+    title: "Auction Ocean",
+    agenda: "Full stack realtime application with Stripe integration provide users with modern auction service...",
+    htmlContent: `
+
+<div class="project-presentation">
+  <header class="project-header">
+    <h1 class="project-title">Auction Ocean</h1>
+    <h5 class="project-subtitle">The Ultimate Real-Time Auction Platform</h5>
+  </header>
+
+  <hr class="divider">
+
+  <section class="project-description">
+    <p>
+      <strong>Auction Ocean</strong> is a cutting-edge web application designed to transform the online auction experience. Leveraging the power of <span class="tech-highlight">Java Spring Boot</span> for robust back-end services, <span class="tech-highlight">Angular</span> for a dynamic and responsive front-end, and <span class="tech-highlight">WebSocket</span> for real-time updates, Auction Ocean ensures a seamless and interactive bidding process. Integrated with <span class="tech-highlight">Stripe</span> for secure and efficient transactions, our platform provides an intuitive user experience and reliable performance.
+    </p>
+  </section>
+
+  <section class="technology-stack">
+    <h2>Technology Stack</h2>
+    <div class="tech-icons">
+      <div class="tech-item">
+        <i class="fab fa-java"></i>
+        <p>Spring Boot</p>
+      </div>
+      <div class="tech-item">
+        <i class="fab fa-angular"></i>
+        <p>Angular</p>
+      </div>
+      <div class="tech-item">
+        <i class="fas fa-plug"></i>
+        <p>WebSocket</p>
+      </div>
+      <div class="tech-item">
+        <i class="fab fa-stripe"></i>
+        <p>Stripe</p>
+      </div>
+      <div class="tech-item">
+    <i class="fas fa-comments"></i>
+    <p>ArtemisMQ</p>
+  </div>
+   <div class="tech-item">
+    <i class="fas fa-database"></i>
+    <p>Hibernate</p>
+  </div>
+    </div>
+  </section>
+  <div class="section">
+    <h2>Impressions</h2>
+    <hr style="width: 100%">
+    <section>
+    <p style="text-align: justify">Suspendisse semper vulputate nihil unum ex recteque necessitatibus ancillae laudem decore malorum erat te malorum reprehendunt definiebas dicam ad possim dolore contentiones expetenda sumo accommodare vocent intellegebat civibus necessitatibus porro movet meliore mi luctus utamur electram primis habitasse doming suspendisse ignota maiorum feugait interesset saperet adhuc congue eros perpetua constituto felis duis pericula electram instructior singulis fastidii scripta quot necessitatibus fames ornatus an dicant sapien simul felis fuisset venenatis maecenas</p>
+</section>
+ </section>
+  <div class="section">
+    <h6>Links</h6>
+    <hr style="width: 50%">
+    <section>
+</section>
+</dic>
+
+
+
+
+<div class="links-container">
+  <a href="https://github.com" class="link-item" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+  <a href="https://docs.google.com/document/d/1gnvc5qzrx_riQWu3UXjhT1_4F6pX3OYs981UAc3YSn0/edit?usp=sharing" class="link-item" target="_blank">
+    <i class="fab fa-google-drive"></i> Google Drive
+  </a>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<style>
+
+.section{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+/* Base styles */
+/* Container for the links */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between links */
+  max-width: 300px; /* Limit the width if needed */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Style for each link item */
+.link-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Default text color */
+  background: rgba(249,249,249,0.36); /* Background color */
+  border: 1px solid #ddd; /* Border around the link */
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.75rem 1rem; /* Padding inside the link */
+  transition: background 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Icon styling */
+.link-item i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Size of the icon */
+  color: #002aff; /* Icon color */
+}
+
+/* Hover effect */
+.link-item:hover {
+  background: rgba(0,255,89,0.64); /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  border-color: #ffff00; /* Border color on hover */
+}
+
+/* Focus effect for accessibility */
+/*.link-item:focus {*/
+/*  outline: 2px solid #007BFF; !* Outline for focus *!*/
+/*  outline-offset: 2px; !* Offset for better visibility *!*/
+/*}*/
+.technology-stack{
+box-shadow: 0px 3px 3px 2px #1c1b1a;
+padding: 2rem;
+display: flex;
+flex-direction: column;
+border-radius: 1rem;
+}
+
+
+.project-presentation {
+
+  /*max-width: 900px;*/
+  /*background: rgba(81,175,185,0.8);*/
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Header styles */
+.project-header {
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  color: rgb(189,201,208);
+  margin: 0;
+}
+
+.project-subtitle {
+  font-size: 1.3rem;
+  color: rgba(133,246,218,0.92);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.divider {
+  margin: 1.5rem 0;
+  border: none;
+  height: 2px;
+  background-color: rgb(248,248,248);
+}
+
+/* Description styles */
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(226,227,218,0.9);
+  text-align: justify;
+}
+
+.tech-highlight {
+  color: #1dff74;
+  font-weight: bold;
+}
+
+/* Technology stack styles */
+.technology-stack h2 {
+  font-size: 1.8rem;
+  color: #70c322;
+  margin-bottom: 1rem;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tech-item i {
+  font-size: 2rem;
+  color: #1dff74;
+  margin-bottom: 0.5rem;
+}
+
+.tech-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #cce8e7;
+}
+
+</style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+`
+
   },
   {
     id: 2,
     imgUrl: 'assets/java-svgrepo-com.svg',
     type: ProjectType.DEMO,
-    title: "AI-Powered Chatbot",
+    title: "Spring Security with Cookies",
     agenda: "Create a demo of an AI-powered chatbot capable of handling customer inquiries and providing real-time support.",
     htmlContent: "<h1>AI-Powered Chatbot</h1><p>This demo showcases an AI chatbot that can assist customers with common queries. It uses natural language processing to understand and respond to user input, aiming to improve customer service efficiency.</p>"
   },
-  {
-    id: 3,
-    imgUrl: 'assets/java-svgrepo-com.svg',
 
-    type: ProjectType.ALGORITHMS,
-    title: "Sorting Algorithms Visualization",
-    agenda: "Develop visualizations for various sorting algorithms to enhance understanding of their processes.",
-    htmlContent: "<h1>Sorting Algorithms Visualization</h1><p>This project focuses on creating visual representations of different sorting algorithms, such as Quick Sort, Merge Sort, and Bubble Sort. The visualizations help in understanding how these algorithms work step by step.</p>"
-  },
   {
     id: 4,
 
-    imgUrl: 'assets/java-svgrepo-com.svg',
+    imgUrl: 'assets/beer.png',
 
     type: ProjectType.COMPLETE,
-    title: "CRM System Development",
-    agenda: "Build a complete Customer Relationship Management (CRM) system to streamline sales and customer service operations.",
-    htmlContent: "<h1>CRM System Development</h1><p>The CRM system will include modules for managing customer data, tracking interactions, and automating workflows. The objective is to improve customer relationships and boost sales efficiency.</p>"
-  },
-  {
-    id: 5,
+    title: "Beer Heavens",
+    agenda: "User friendly E-commerce solution for local breweries with delivery service.",
+    htmlContent: `
+    <div style="display: flex; flex-direction: column; height: 100%; padding-bottom: 10rem">
 
-    imgUrl: 'assets/java-svgrepo-com.svg',
+        <h1>Beer Heavens</h1>
+        <div style="padding: 3rem; box-shadow: 0  2rem 2rem 2rem #1c1b1a; border-radius: 2rem; background: #7e1a84">
+             <h4>Ooops...</h4>
+             <p>Seems like project is <strong>still developing</strong></p>
+        </div>
+    </div> `
 
-    type: ProjectType.DEMO,
-    title: "Augmented Reality App",
-    agenda: "Create a demo of an augmented reality app that enhances real-world environments with digital overlays.",
-    htmlContent: "<h1>Augmented Reality App</h1><p>This demo project showcases an augmented reality (AR) application that allows users to interact with digital objects overlaid on their real-world environment. The app is designed to demonstrate the potential of AR in various industries.</p>"
-  },
-  {
-    id: 6,
-
-    imgUrl: 'assets/java-svgrepo-com.svg',
-
-    type: ProjectType.ALGORITHMS,
-    title: "Pathfinding Algorithms",
-    agenda: "Implement and compare different pathfinding algorithms, including A* and Dijkstra’s algorithm.",
-    htmlContent: "<h1>Pathfinding Algorithms</h1><p>The project involves implementing various pathfinding algorithms to solve shortest path problems. It includes visualizations that compare the efficiency of A*, Dijkstra’s, and other algorithms in different scenarios.</p>"
   }
 ];
 

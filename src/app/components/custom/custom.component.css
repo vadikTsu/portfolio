@@ -1,0 +1,163 @@
+/*!* Container for the draggable elements *!*/
+/*.time-list {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  gap: 1rem;*/
+/*  padding: 1rem;*/
+/*  max-width: 400px;*/
+/*  margin: auto;*/
+/*  background-color: #f9f9f9;*/
+/*  border-radius: 10px;*/
+/*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*!* Styling each draggable element *!*/
+/*.dragable {*/
+/*  padding: 1.5rem;*/
+/*  background-color: #ffc10d;*/
+/*  border: 2px solid #ffc10d;*/
+/*  border-radius: 2rem;*/
+/*  cursor: grab;*/
+/*  color: #333;*/
+/*  font-weight: bold;*/
+/*  text-align: center;*/
+/*  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;*/
+/*  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*!* Hover effect with scaling and shadow *!*/
+/*.dragable:hover {*/
+/*  transform: scale(1.05);*/
+/*  background-color: #ffae00;*/
+/*  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);*/
+/*}*/
+
+/*!* Active dragging effect *!*/
+/*.dragable:active {*/
+/*  cursor: grabbing;*/
+/*  transform: scale(1.1) rotate(3deg);*/
+/*  background-color: #ff9a00;*/
+/*  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*!* Keyframe animation for a subtle bounce effect *!*/
+/*@keyframes bounce {*/
+/*  0%, 100% {*/
+/*    transform: translateY(0);*/
+/*  }*/
+/*  50% {*/
+/*    transform: translateY(-5px);*/
+/*  }*/
+/*}*/
+
+/*!* Apply bounce animation on drag start *!*/
+/*.dragable.dragging {*/
+/*  animation: bounce 0.6s infinite;*/
+/*}*/
+
+/*!* Styling for drop target with highlight effect *!*/
+/*.dragable.drop-target {*/
+/*  border-color: #008cba;*/
+/*  background-color: #e0f7fa;*/
+/*  transform: scale(1.05);*/
+/*  box-shadow: 0 0 15px rgba(0, 140, 186, 0.5);*/
+/*}*/
+/*---------------*/
+
+/*.resizable-container {*/
+/*  !*position: relative;*!*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  height: 100vh;*/
+/*}*/
+
+/*.resizable-box {*/
+/*  position: relative;*/
+/*  width: 200px;*/
+/*  height: 150px;*/
+/*  background-color: #ffc10d;*/
+/*  border: 2px solid #333;*/
+/*  border-radius: 8px;*/
+/*  overflow: visible;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+/*  transition: box-shadow 0.2s ease;*/
+/*}*/
+
+/*.resizable-box:hover {*/
+/*  box-shadow: 0 8px 16px rgba(249, 13, 13, 1);*/
+/*}*/
+
+/*.resize-handle {*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*  right: 0;*/
+/*  width: 15px;*/
+/*  height: 15px;*/
+/*  background-color: #333;*/
+/*  cursor: se-resize;*/
+/*  border-radius: 0 0 8px 0;*/
+/*}*/
+
+/*.size-display {*/
+/*  position: absolute;*/
+/*  top: 10px;*/
+/*  left: 10px;*/
+/*  color: #fff;*/
+/*  font-weight: bold;*/
+/*  background-color: rgba(0, 0, 0, 0.5);*/
+/*  padding: 5px 10px;*/
+/*  border-radius: 5px;*/
+/*}*/
+/*.container {*/
+/*  width: 300px;*/
+/*  height: 200px;*/
+/*  border: 2px solid #333;*/
+/*  background-color: #f0f0f0;*/
+/*  position: relative;*/
+/*  overflow: hidden; !* This will clip any overflowing content *!*/
+/*}*/
+
+/*.content {*/
+/*  width: 400px;*/
+/*  height: 300px;*/
+/*  background-color: #ffae00;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*}*/
+
+/*.inner-content {*/
+/*  padding: 10px;*/
+/*  color: #333;*/
+/*  font-size: 16px;*/
+/*}*/
+
+
+/*----------------------*/
+/*.img-input myfile {*/
+/*  height: 20rem;*/
+/*  background: #4CAF50;*/
+/*}*/
+
+
+/*.img-list{*/
+
+/*}*/
+.img-list{
+  background: #194F82;
+
+  display: flex;
+}
+
+.img-list img{
+  height: 100px;
+
+}
+
+.image{
+  height: 100px;
+}

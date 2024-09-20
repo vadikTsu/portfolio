@@ -41,7 +41,7 @@ export class PortfolioComponent implements OnInit{
 
   openProject(project: Project) {
     this.dialog.open(ProjectComponent, {
-      height: '100vh',
+      height: '200vh',
       maxWidth: '100vw',
       data: project
     })

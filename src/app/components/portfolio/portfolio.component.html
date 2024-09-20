@@ -1,10 +1,10 @@
 <h1>
-  Projects 😎
+  Projects 🤔
 </h1>
 
-<div class="tab-shadow">
+<div class="tab-shadow" style="border-radius: 2rem;">
 <mat-tab-group>
-  <mat-tab >
+  <mat-tab>
     <ng-template matTabLabel>
       <span class="custom-label">Complete 🏁</span>
     </ng-template>
@@ -15,7 +15,7 @@
         <div class="badge">NEW</div>
         <mat-card-header class="card-header">
           <mat-card-title>
-            <h4>{{project.title}}</h4>
+            <h4 style="font-family: 'Calibri'; font-weight: lighter; color: yellow">{{project.title}}</h4>
           </mat-card-title>
         </mat-card-header>
 
@@ -45,7 +45,7 @@
       <mat-card class="project-card" appearance="raised">
         <mat-card-header class="card-header">
           <mat-card-title>
-            <h4>{{project.title}}</h4>
+            <h4 style="font-family: 'Calibri'; font-weight: lighter; color: yellow">{{project.title}}</h4>
           </mat-card-title>
         </mat-card-header>
 
@@ -53,7 +53,7 @@
 
         <mat-card-content>
           <hr>
-          <p>{{project.agenda}}</p>
+          <p >{{project.agenda}}</p>
         </mat-card-content>
 
         <mat-card-actions>
@@ -91,6 +91,9 @@
         <button mat-raised-button style="width: 100%"  (click)="openProject(project)">View More</button>
       </mat-card-actions>
     </mat-card>
+  } @empty {
+    <div class="empty-alert">Ooops ... <p>Seems like author have not created content yet :(</p></div>
+
   }
   </mat-tab>
 

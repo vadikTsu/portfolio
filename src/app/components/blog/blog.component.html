@@ -1,14 +1,14 @@
 <div class="blog-container">
   <div class="blog-content">
 
-    <div class="blog-article-list">
+    <div class="blog-article-list" @anim>
       @for (article of ARTICLES; track article.header) {
-        <div class="article">
+        <div class="article" >
           <div class="article-img">
             <img [src]="article.imgUrl">
           </div>
           <div class="article-header">
-            <h5>{{ article.header }}</h5>
+            <h5 style="font-weight: bold">{{ article.header }}</h5>
           </div>
 
           <div class="article-read">

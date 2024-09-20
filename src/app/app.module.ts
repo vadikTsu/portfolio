@@ -43,6 +43,8 @@ import { ProjectComponent } from './components/project/project.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { ArticleComponent } from './components/article/article.component';
 import { AboutComponent } from './components/about/about.component';
+import { LazyLoadDirective } from './lazy-load.directive';
+import { CustomComponent } from './components/custom/custom.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { AboutComponent } from './components/about/about.component';
     BlogComponent,
     ProjectComponent,
     ArticleComponent,
-    AboutComponent
+    AboutComponent,
+    LazyLoadDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +93,8 @@ import { AboutComponent } from './components/about/about.component';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule,MatSnackBarModule
+    VgBufferingModule,
+    MatSnackBarModule
   ],
   providers: [
     provideAnimationsAsync()
